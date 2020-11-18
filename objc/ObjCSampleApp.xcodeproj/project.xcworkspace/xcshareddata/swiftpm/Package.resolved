@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "TransifexNative",
+        "repositoryURL": "https://github.com/transifex/transifex-swift/",
+        "state": {
+          "branch": "stelios/swizzler",
+          "revision": "a93c50d93b944d1bded7c6e277061df5c363aa21",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
