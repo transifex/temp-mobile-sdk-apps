@@ -365,7 +365,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/transifex/transifex-swift/";
 			requirement = {
-				branch = stelios/swizzler;
+				branch = devel;
 				kind = branch;
 			};
 		};

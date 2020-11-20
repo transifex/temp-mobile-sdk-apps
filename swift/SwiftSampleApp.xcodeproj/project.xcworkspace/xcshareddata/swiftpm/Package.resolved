@@ -5,8 +5,8 @@
         "package": "TransifexNative",
         "repositoryURL": "https://github.com/transifex/transifex-swift/",
         "state": {
-          "branch": "stelios/swizzler",
-          "revision": "3057950a057233201ec0ba6f496b69d9cb173d77",
+          "branch": "devel",
+          "revision": "65addbcfdbe5d8a85868d68af3765bb25ea8f905",
           "version": null
         }
       }
