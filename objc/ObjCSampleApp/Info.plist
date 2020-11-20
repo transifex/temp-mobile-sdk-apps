@@ -20,6 +20,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>TRANSIFEX_SECRET</key>
+	<string>$(TRANSIFEX_SECRET)</string>
+	<key>TRANSIFEX_TOKEN</key>
+	<string>$(TRANSIFEX_TOKEN)</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -62,9 +66,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>TRANSIFEX_TOKEN</key>
-    <string>$(TRANSIFEX_TOKEN)</string>
-    <key>TRANSIFEX_SECRET</key>
-    <string>$(TRANSIFEX_SECRET)</string>
 </dict>
 </plist>

@@ -1,13 +1,15 @@
 //
-//  TXExtensions.swift
-//  TestTransifexSwiftClient
+//  TXNativeExtensions.swift
+//  TransifexNative
 //
 //  Created by Stelios Petrakis on 16/11/20.
+//  Copyright © 2020 Transifex. All rights reserved.
 //
 
 // Note:
-// Please copy this file to your project, if you are making use of either of the
-// following Swift methods:
+// Please copy this file to your project and add it to all of the app's targets
+// if you are making use of either of the following Swift methods:
+//
 // * NSString.localizedStringWithFormat()
 // * String.localizedStringWithFormat()
 //
