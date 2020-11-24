@@ -17,22 +17,16 @@ class ViewController: UIViewController {
         print("\(#function) -> \(localizedString)")
         
         let localizedMinutes = "%#@d_unit_time@"
-        
-        let randomNumber = Int.random(in: 1...5)
-        
-        let localizedStringWithFormat1 = String.localizedStringWithFormat(localizedMinutes, 1)
-        
-        print("\(localizedStringWithFormat1)")
-        
-        let text = NSString.localizedStringWithFormat(localizedMinutes as NSString,
-                                                    randomNumber)
-        
-        print("\(text)")
-        
         let localizedUnsignedMinutes = "%#@u_unit_time@"
-        let localizedStringWithFormat2 = String.localizedStringWithFormat(localizedUnsignedMinutes, UInt(3))
         
-        print("\(localizedStringWithFormat2)")
+        for cnt in 0...10 {
+            let text = NSString.localizedStringWithFormat(localizedMinutes as NSString, cnt)
+            print("[\(cnt)] -> \(text)")
+        }
+        
+        let utext = String.localizedStringWithFormat(localizedUnsignedMinutes, UInt(2))
+        print("[2] -> \(utext)")
+        
     }
 }
 
