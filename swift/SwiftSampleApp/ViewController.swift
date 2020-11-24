@@ -27,6 +27,9 @@ class ViewController: UIViewController {
         let utext = String.localizedStringWithFormat(localizedUnsignedMinutes, UInt(2))
         print("[2] -> \(utext)")
         
+        print(NSLocalizedString("Powerful you have become, the dark side I sense in you.", comment: ""))
+        print(NSLocalizedString("I find your lack of faith disturbing.", comment: ""))
+        
     }
 }
 
