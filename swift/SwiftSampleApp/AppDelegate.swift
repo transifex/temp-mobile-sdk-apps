@@ -10,7 +10,7 @@ import TransifexNative
 
 class CustomLocaleProvider : CurrentLocaleProvider {
     func currentLocale() -> String {
-        return "fr"
+        return "sl"
     }
 }
 
@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Initialize Transifex Native
         let localeState = LocaleState(sourceLocale: "en-US",
-                                      appLocales: ["fr"],
+                                      appLocales: ["fr", "de", "sl"],
                                       currentLocaleProvider: CustomLocaleProvider())
         TxNative.initialize(
             locales: localeState,
