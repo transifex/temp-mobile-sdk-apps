@@ -8,7 +8,7 @@
 import UIKit
 import TransifexNative
 
-class CustomLocaleProvider : CurrentLocaleProvider {
+class CustomLocaleProvider : TXCurrentLocaleProvider {
     func currentLocale() -> String {
         return "sl"
     }
@@ -17,14 +17,15 @@ class CustomLocaleProvider : CurrentLocaleProvider {
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Extract Secrets
         let transifexToken = Bundle.main.infoDictionary!["TRANSIFEX_TOKEN"] as! String
         let transifexSecret = Bundle.main.infoDictionary!["TRANSIFEX_SECRET"] as! String
         
         // Initialize Transifex Native
-        let localeState = LocaleState(sourceLocale: "en-US",
-                                      appLocales: ["fr", "de", "sl"],
+        let localeState = LocaleState(sourceLocale: "en",
+                                      appLocales: ["en", "fr", "de", "sl"],
                                       currentLocaleProvider: CustomLocaleProvider())
         TxNative.initialize(
             locales: localeState,

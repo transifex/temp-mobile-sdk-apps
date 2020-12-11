@@ -9,7 +9,7 @@
 
 @import TransifexNative;
 
-@interface CustomLocaleProvider : NSObject <CurrentLocaleProvider>
+@interface CustomLocaleProvider : NSObject <TXCurrentLocaleProvider>
 
 @end
 
@@ -38,6 +38,7 @@
     
     LocaleState *localeState = [[LocaleState alloc] initWithSourceLocale:@"en"
                                                               appLocales:@[
+                                                                  @"en",
                                                                   @"fr"
                                                               ]
                                                    currentLocaleProvider:customLocale];
