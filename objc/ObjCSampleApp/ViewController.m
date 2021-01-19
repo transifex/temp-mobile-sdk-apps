@@ -6,7 +6,6 @@
 //
 
 #import "ViewController.h"
-#include <stdlib.h>
 
 @interface ViewController ()
 
@@ -23,23 +22,27 @@
     NSLog(@"%s -> %@",
           __PRETTY_FUNCTION__,
           localizedString);
-
-    NSString * localizedMinutes = @"%#@d_unit_time@";
     
-    int randomNumber = arc4random_uniform(5);
-
-    NSString *localizedStringWithFormat1 = [NSString localizedStringWithFormat:localizedMinutes, 1];
-
-    NSLog(@"%@", localizedStringWithFormat1);
+    NSString *localizedMinutes = NSLocalizedString(@"unit-time.%d-minute(s)",
+                                                   comment: "dminutes");
+    NSString *localizedUnsignedMinutes = NSLocalizedString(@"unit-time.%u-minute(s)",
+                                                     comment: "uminutes");
     
-    NSString *text = [NSString localizedStringWithFormat:localizedMinutes, randomNumber];
-
-    NSLog(@"%@", text);
+    for (int cnt = 0; cnt < 10; cnt++) {
+        NSString *text = [NSString localizedStringWithFormat:localizedMinutes,
+                          cnt];
+        NSLog(@"[%d] -> %@", cnt, text);
+    }
     
-    NSString * localizedUnsignedMinutes = @"%#@u_unit_time@";
-    NSString *localizedStringWithFormat2 = [NSString localizedStringWithFormat:localizedUnsignedMinutes, (unsigned int)3];
+    NSUInteger number = 2;
+    NSString *uText = [NSString localizedStringWithFormat:localizedUnsignedMinutes,
+                       number];
+    NSLog(@"[2] -> %@", uText);
     
-    NSLog(@"%@", localizedStringWithFormat2);
+    NSLog(NSLocalizedString(@"Powerful you have become, the dark side I sense in you.",
+                            @""));
+    NSLog(NSLocalizedString(@"I find your lack of faith disturbing.",
+                            @""));
 }
 
 

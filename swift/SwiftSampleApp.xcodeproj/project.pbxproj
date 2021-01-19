@@ -7,18 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D0A68DB25BF2A1300262CCC /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 9D0A68DD25BF2A1300262CCC /* Localizable.stringsdict */; };
 		9D321B3C2562D40B0055256B /* TXNativeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D321B3B2562D40B0055256B /* TXNativeExtensions.swift */; };
-		9D85D5EC2565583D00450716 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9D85D5EB2565583D00450716 /* Secrets.xcconfig */; };
-		9D85D5F325655C6D00450716 /* TransifexNative in Frameworks */ = {isa = PBXBuildFile; productRef = 9D85D5F225655C6D00450716 /* TransifexNative */; };
 		9DFC6574254C12AC0034027B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC6573254C12AC0034027B /* AppDelegate.swift */; };
 		9DFC6576254C12AC0034027B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC6575254C12AC0034027B /* SceneDelegate.swift */; };
 		9DFC6578254C12AC0034027B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC6577254C12AC0034027B /* ViewController.swift */; };
 		9DFC657B254C12AC0034027B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DFC6579254C12AC0034027B /* Main.storyboard */; };
 		9DFC657D254C12AD0034027B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DFC657C254C12AD0034027B /* Assets.xcassets */; };
 		9DFC6580254C12AD0034027B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DFC657E254C12AD0034027B /* LaunchScreen.storyboard */; };
+		9DFD6CBE25CC26F800BB633A /* Transifex in Frameworks */ = {isa = PBXBuildFile; productRef = 9DFD6CBD25CC26F800BB633A /* Transifex */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D0A68DC25BF2A1300262CCC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		9D321B3B2562D40B0055256B /* TXNativeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TXNativeExtensions.swift; sourceTree = "<group>"; };
 		9D85D5EB2565583D00450716 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		9DFC6570254C12AC0034027B /* SwiftSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D85D5F325655C6D00450716 /* TransifexNative in Frameworks */,
+				9DFD6CBE25CC26F800BB633A /* Transifex in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +63,7 @@
 		9DFC6572254C12AC0034027B /* SwiftSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				9D0A68DD25BF2A1300262CCC /* Localizable.stringsdict */,
 				9DFC6573254C12AC0034027B /* AppDelegate.swift */,
 				9DFC6575254C12AC0034027B /* SceneDelegate.swift */,
 				9DFC6577254C12AC0034027B /* ViewController.swift */,
@@ -92,7 +94,7 @@
 			);
 			name = SwiftSampleApp;
 			packageProductDependencies = (
-				9D85D5F225655C6D00450716 /* TransifexNative */,
+				9DFD6CBD25CC26F800BB633A /* Transifex */,
 			);
 			productName = TestTransifexSwiftClient;
 			productReference = 9DFC6570254C12AC0034027B /* SwiftSampleApp.app */;
@@ -105,7 +107,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					9DFC656F254C12AC0034027B = {
 						CreatedOnToolsVersion = 12.0;
@@ -122,7 +124,7 @@
 			);
 			mainGroup = 9DFC6567254C12AC0034027B;
 			packageReferences = (
-				9D85D5F125655C6D00450716 /* XCRemoteSwiftPackageReference "transifex-swift" */,
+				9DFD6CBC25CC26F800BB633A /* XCRemoteSwiftPackageReference "transifex-swift" */,
 			);
 			productRefGroup = 9DFC6571254C12AC0034027B /* Products */;
 			projectDirPath = "";
@@ -138,9 +140,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D85D5EC2565583D00450716 /* Secrets.xcconfig in Resources */,
 				9DFC6580254C12AD0034027B /* LaunchScreen.storyboard in Resources */,
 				9DFC657D254C12AD0034027B /* Assets.xcassets in Resources */,
+				9D0A68DB25BF2A1300262CCC /* Localizable.stringsdict in Resources */,
 				9DFC657B254C12AC0034027B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,6 +164,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		9D0A68DD25BF2A1300262CCC /* Localizable.stringsdict */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D0A68DC25BF2A1300262CCC /* en */,
+			);
+			name = Localizable.stringsdict;
+			sourceTree = "<group>";
+		};
 		9DFC6579254C12AC0034027B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -361,21 +371,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9D85D5F125655C6D00450716 /* XCRemoteSwiftPackageReference "transifex-swift" */ = {
+		9DFD6CBC25CC26F800BB633A /* XCRemoteSwiftPackageReference "transifex-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/transifex/transifex-swift/";
 			requirement = {
-				branch = devel;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9D85D5F225655C6D00450716 /* TransifexNative */ = {
+		9DFD6CBD25CC26F800BB633A /* Transifex */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9D85D5F125655C6D00450716 /* XCRemoteSwiftPackageReference "transifex-swift" */;
-			productName = TransifexNative;
+			package = 9DFD6CBC25CC26F800BB633A /* XCRemoteSwiftPackageReference "transifex-swift" */;
+			productName = Transifex;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

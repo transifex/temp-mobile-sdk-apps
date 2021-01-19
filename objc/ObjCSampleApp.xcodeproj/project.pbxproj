@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D85D60325655DF300450716 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9D85D60225655DF300450716 /* Secrets.xcconfig */; };
-		9D85D60D25655F1900450716 /* TransifexNative in Frameworks */ = {isa = PBXBuildFile; productRef = 9D85D60C25655F1900450716 /* TransifexNative */; };
 		9DFC65BD254C13B90034027B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC65BC254C13B90034027B /* AppDelegate.m */; };
 		9DFC65C0254C13B90034027B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC65BF254C13B90034027B /* SceneDelegate.m */; };
 		9DFC65C3254C13B90034027B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC65C2254C13B90034027B /* ViewController.m */; };
@@ -16,6 +14,7 @@
 		9DFC65C8254C13BA0034027B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DFC65C7254C13BA0034027B /* Assets.xcassets */; };
 		9DFC65CB254C13BA0034027B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DFC65C9254C13BA0034027B /* LaunchScreen.storyboard */; };
 		9DFC65CE254C13BA0034027B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC65CD254C13BA0034027B /* main.m */; };
+		9DFD6CC325CC272100BB633A /* Transifex in Frameworks */ = {isa = PBXBuildFile; productRef = 9DFD6CC225CC272100BB633A /* Transifex */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D85D60D25655F1900450716 /* TransifexNative in Frameworks */,
+				9DFD6CC325CC272100BB633A /* Transifex in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +97,7 @@
 			);
 			name = ObjCSampleApp;
 			packageProductDependencies = (
-				9D85D60C25655F1900450716 /* TransifexNative */,
+				9DFD6CC225CC272100BB633A /* Transifex */,
 			);
 			productName = TestTransifexObjCClient;
 			productReference = 9DFC65B8254C13B90034027B /* ObjCSampleApp.app */;
@@ -110,7 +109,7 @@
 		9DFC65B0254C13B90034027B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					9DFC65B7254C13B90034027B = {
 						CreatedOnToolsVersion = 12.0;
@@ -128,7 +127,7 @@
 			);
 			mainGroup = 9DFC65AF254C13B90034027B;
 			packageReferences = (
-				9D85D60B25655F1900450716 /* XCRemoteSwiftPackageReference "transifex-swift" */,
+				9DFD6CC125CC272100BB633A /* XCRemoteSwiftPackageReference "transifex-swift" */,
 			);
 			productRefGroup = 9DFC65B9254C13B90034027B /* Products */;
 			projectDirPath = "";
@@ -144,7 +143,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D85D60325655DF300450716 /* Secrets.xcconfig in Resources */,
 				9DFC65CB254C13BA0034027B /* LaunchScreen.storyboard in Resources */,
 				9DFC65C8254C13BA0034027B /* Assets.xcassets in Resources */,
 				9DFC65C6254C13B90034027B /* Main.storyboard in Resources */,
@@ -374,21 +372,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9D85D60B25655F1900450716 /* XCRemoteSwiftPackageReference "transifex-swift" */ = {
+		9DFD6CC125CC272100BB633A /* XCRemoteSwiftPackageReference "transifex-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/transifex/transifex-swift/";
 			requirement = {
-				branch = devel;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9D85D60C25655F1900450716 /* TransifexNative */ = {
+		9DFD6CC225CC272100BB633A /* Transifex */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9D85D60B25655F1900450716 /* XCRemoteSwiftPackageReference "transifex-swift" */;
-			productName = TransifexNative;
+			package = 9DFD6CC125CC272100BB633A /* XCRemoteSwiftPackageReference "transifex-swift" */;
+			productName = Transifex;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import TransifexNative
+import Transifex
 
 class CustomLocaleProvider : TXCurrentLocaleProvider {
     func currentLocale() -> String {
@@ -19,26 +19,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Extract Secrets
+        // Extract token
         let transifexToken = Bundle.main.infoDictionary!["TRANSIFEX_TOKEN"] as! String
-        let transifexSecret = Bundle.main.infoDictionary!["TRANSIFEX_SECRET"] as! String
         
         // Initialize Transifex Native
-        let localeState = LocaleState(sourceLocale: "en",
-                                      appLocales: ["en", "fr", "de", "sl"],
-                                      currentLocaleProvider: CustomLocaleProvider())
-        TxNative.initialize(
+        let localeState = TXLocaleState(sourceLocale: "en",
+                                        appLocales: ["en", "fr", "de", "sl"],
+                                        currentLocaleProvider: CustomLocaleProvider())
+        
+        TXNative.initialize(
             locales: localeState,
             token: transifexToken,
-            secret: transifexSecret,
-            cdsHost: "https://cds.svc.transifex.net",
-            cache: MemoryCache(),
-            missingPolicy: CompositePolicy(
-                PseudoTranslationPolicy(),
-                WrappedStringPolicy(start: "[", end: "]")
+            secret: nil,
+            missingPolicy: TXCompositePolicy(
+                TXPseudoTranslationPolicy(),
+                TXWrappedStringPolicy(start: "[", end: "]")
             )
         )
-        TxNative.fetchTranslations()
+        TXNative.fetchTranslations()
         
         return true
     }

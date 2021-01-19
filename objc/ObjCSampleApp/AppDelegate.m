@@ -7,7 +7,7 @@
 
 #import "AppDelegate.h"
 
-@import TransifexNative;
+@import Transifex;
 
 @interface CustomLocaleProvider : NSObject <TXCurrentLocaleProvider>
 
@@ -16,7 +16,7 @@
 @implementation CustomLocaleProvider
 
 - (NSString * _Nonnull)currentLocale {
-    return @"fr";
+    return @"sl";
 }
 
 @end
@@ -29,38 +29,41 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Extract Secrets
+    // Extract token
     NSString *transifexToken = NSBundle.mainBundle.infoDictionary[@"TRANSIFEX_TOKEN"];
-    NSString *transifexSecret = NSBundle.mainBundle.infoDictionary[@"TRANSIFEX_SECRET"];
 
     // Initialize Transifex Native
     CustomLocaleProvider *customLocale = [CustomLocaleProvider new];
     
-    LocaleState *localeState = [[LocaleState alloc] initWithSourceLocale:@"en"
-                                                              appLocales:@[
-                                                                  @"en",
-                                                                  @"fr"
-                                                              ]
-                                                   currentLocaleProvider:customLocale];
+    TXLocaleState *localeState = [[TXLocaleState alloc] initWithSourceLocale:@"en"
+                                                                  appLocales:@[
+                                                                      @"en",
+                                                                      @"fr",
+                                                                      @"de",
+                                                                      @"sl"
+                                                                  ]
+                                                       currentLocaleProvider:customLocale];
     
-    PseudoTranslationPolicy *pseudoTranslationPolicy = [PseudoTranslationPolicy new];
-    WrappedStringPolicy *wrappedStringPolicy = [[WrappedStringPolicy alloc] initWithStart:@"["
-                                                                                      end:@"]"];
-    CompositePolicy *compositePolicy = [[CompositePolicy alloc] init:@[
+    TXPseudoTranslationPolicy *pseudoTranslationPolicy = [TXPseudoTranslationPolicy new];
+    TXWrappedStringPolicy *wrappedStringPolicy = [[TXWrappedStringPolicy alloc] initWithStart:@"["
+                                                                                          end:@"]"];
+    TXCompositePolicy *compositePolicy = [[TXCompositePolicy alloc] init:@[
         pseudoTranslationPolicy,
         wrappedStringPolicy
     ]];
     
-    [TxNative initializeWithLocales:localeState
+    [TXNative initializeWithLocales:localeState
                               token:transifexToken
-                             secret:transifexSecret
-                            cdsHost:@"https://cds.svc.transifex.net/"
-                              cache:[MemoryCache new]
+                             secret:nil
+                            cdsHost:nil
+                            session:nil
+                              cache:nil
                       missingPolicy:compositePolicy
                         errorPolicy:nil
-                  renderingStrategy:RenderingStategyPlatform];
-
-    [TxNative fetchTranslations:nil];
+                  renderingStrategy:TXRenderingStategyPlatform];
+    
+    [TXNative fetchTranslations:nil
+              completionHandler:nil];
     
     return YES;
 }
