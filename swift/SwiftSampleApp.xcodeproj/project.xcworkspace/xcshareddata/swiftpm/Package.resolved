@@ -2,12 +2,12 @@
   "object": {
     "pins": [
       {
-        "package": "TransifexNative",
+        "package": "transifex",
         "repositoryURL": "https://github.com/transifex/transifex-swift/",
         "state": {
-          "branch": "devel",
-          "revision": "bf1af196e20ecaf8cd9304efdceb6b562f71f25b",
-          "version": null
+          "branch": null,
+          "revision": "a326fbf8bc8023b8cc09f31beffebf82faadeebc",
+          "version": "0.1.0"
         }
       }
     ]

@@ -64,7 +64,5 @@
 	</array>
 	<key>TRANSIFEX_TOKEN</key>
 	<string>$(TRANSIFEX_TOKEN)</string>
-	<key>TRANSIFEX_SECRET</key>
-	<string>$(TRANSIFEX_SECRET)</string>
 </dict>
 </plist>
